@@ -1,0 +1,14 @@
+{
+  "name": "helpmetofind",
+  "version": "1.0.0",
+  "description": "We will help you to find your lost ones",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "IroshanAV",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.4"
+  }
+}
