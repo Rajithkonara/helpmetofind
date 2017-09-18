@@ -7,11 +7,13 @@ app.get("/",function(req,res){
   res.render("landing");
 });
 
-app.get("",function(req,res){
-    var findus=[
+app.get("/findus",function(req,res){
+    var findusall=[
         {name: "Tommy",breed: "German Shephard",image:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Buck_The_GSD.jpg/170px-Buck_The_GSD.jpg"},
         {name: "Rega", breed:"Rottweiler",image:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/%22Prince%22_%287369763074%29.jpg/200px-%22Prince%22_%287369763074%29.jpg"}
     ]
+
+    res.render("findus",{findusall:findusall});
 });
 
 app.listen(3000,function(){

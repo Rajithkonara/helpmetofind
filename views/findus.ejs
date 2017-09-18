@@ -1,0 +1,13 @@
+<% include partials/header  %>
+
+
+<h1>Find us man</h1>
+
+<% findusall.forEach(function(findus){ %>
+    <div>
+       <h4> <%= findus.name %></h4>
+       <img src="<%= findus.image %>" >
+    </div>
+<% }); %>
+
+<% include partials/footer  %>
