@@ -12,9 +12,13 @@
 
 
 <div class="container">
-    <div class="row" style="display:flex; flex-wrap:wrap;">
+   
+    <div class="row" style="margin:100;">
+            
             <% findusall.forEach(function(findus){ %> 
-        <div class="col-md-3 col-sm-6">
+                <br>
+               
+        <div class="col-md-3 col-sm-6"  style="display:flex; flex-wrap:wrap;" >
                
 <div class="card" style="width: 20rem;">
         <img class="card-img-top img-thumbnail" src="<%= findus.image %>">
@@ -27,7 +31,7 @@
 
      
     </div>
-    <% }); %>
+  <% }); %>
 </div>
 
 <% include partials/footer  %>
