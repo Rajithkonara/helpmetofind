@@ -1,8 +1,9 @@
 <% include partials/header  %>
 
 <a href="/findus/new">Add new missing one</a>
-<h1>Find us man</h1>
-
+<br>
+<h3>Have you got a clue about them?</h3>
+<br>
 <!-- <% findusall.forEach(function(findus){ %>
     <div>
        <h4> <%= findus.name %></h4>
@@ -16,16 +17,17 @@
     <div class="row" style="margin-top:100;">
            
             <% findusall.forEach(function(findus){ %> 
-                
+            
                
         <div class="col-md-3 col-sm-6"  style="display:flex; flex-wrap:wrap;" >
-               
+              
 <div class="card" style="width: 20rem;">
+    <h2>MISSING!!!</h2> 
         <img class="card-img-top img-thumbnail" src="<%= findus.image %>">
         <div class="card-block">
           <h4 class="card-title"> <%= findus.name %></h4>
           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+          <a href="#" class="btn btn-success">Found a clue?</a>
         </div>
       </div>
 

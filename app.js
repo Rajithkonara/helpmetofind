@@ -47,6 +47,8 @@ app.get("/",function(req,res){
   res.render("landing");
 });
 
+
+
 app.get("/findus",function(req,res){
  Findus.find({},function(err,findusall){
      if(err){
@@ -54,10 +56,7 @@ app.get("/findus",function(req,res){
      }else{
       res.render("findus",{findusall:findusall});
      }
- });
-
-
-    
+ });   
 });
 
 app.post("/findus",function(req,res){
@@ -82,9 +81,16 @@ Findus.create(newfindus, function(err,newlyCreated){
  //res.redirect("/findus");
 });
 
+
+
+
+
 app.get("/findus/new",function(req,res){
     res.render("new");
 });
+
+
+
 
 app.listen(3000,function(){
     console.log("Yeay server is working");
