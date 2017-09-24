@@ -20,26 +20,28 @@ var findusall=[
 
 
 var findusallSchema = new mongoose.Schema({
+    title:String,
     name: String,
     breed: String,
-    image: String
+    image: String,
+    description: String
 });
 
 var Findus = mongoose.model("Findus",findusallSchema);
 
 
-Findus.create({
-    name: "Scooby",
-    breed:"Labrador",
-    image:"http://cdn1-www.dogtime.com/assets/uploads/gallery/labrador-retriever-dog-breed-pictures/labrador-retriever-dog-pictures-1.jpg"
-},function(err,findus){
-   if(err){
-       console.log(err);
-   }else{
-       console.log("Added your notice");
-       console.log(findus);
-   }
-});
+// Findus.create({
+//     name: "Scooby",
+//     breed:"Labrador",
+//     image:"http://cdn1-www.dogtime.com/assets/uploads/gallery/labrador-retriever-dog-breed-pictures/labrador-retriever-dog-pictures-1.jpg"
+// },function(err,findus){
+//    if(err){
+//        console.log(err);
+//    }else{
+//        console.log("Added your notice");
+//        console.log(findus);
+//    }
+// });
 
 
 
@@ -54,17 +56,22 @@ app.get("/findus",function(req,res){
      if(err){
          console.log(err);
      }else{
-      res.render("findus",{findusall:findusall});
+      res.render("index",{findusall:findusall});
      }
  });   
 });
 
+
+
+
 app.post("/findus",function(req,res){
+ var title = req.body.title;
  var name = req.body.name;
  var breed = req.body.breed;
  var image = req.body.image;
+ var description = req.body.description;
 
- var newfindus = {name:name,breed:breed,image:image};
+ var newfindus = {title:title,name:name,breed:breed,image:image,description:description};
 // Create a new notice and save to DB
 Findus.create(newfindus, function(err,newlyCreated){
   if(err){
@@ -74,13 +81,10 @@ Findus.create(newfindus, function(err,newlyCreated){
       res.redirect("/findus");
   }
 });
-
  findusall.push(newfindus);
-
  //redirect back to findus page
  //res.redirect("/findus");
 });
-
 
 
 
@@ -91,6 +95,19 @@ app.get("/findus/new",function(req,res){
 
 
 
+app.get("/findus/:id",function(req,res){
+  // find notice by ID
+  Findus.findById(req.params.id,function(err,foundNotice){
+     if(err){
+         console.log(err);
+     }else{
+         //render show template with that campground
+         res.render("show",{foundNotice:foundNotice});
+     }
+  });
+  });
+  
+  
 
 app.listen(3000,function(){
     console.log("Yeay server is working");

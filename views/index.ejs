@@ -22,12 +22,12 @@
         <div class="col-md-3 col-sm-6"  style="display:flex; flex-wrap:wrap;" >
               
 <div class="card" style="width: 20rem;">
-    <h2>MISSING!!!</h2> 
+    <h3><%= findus.title %></h3> 
         <img class="card-img-top img-thumbnail" src="<%= findus.image %>">
         <div class="card-block">
           <h4 class="card-title"> <%= findus.name %></h4>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-warning">Found a clue?</a>
+          <p class="card-text"><%= findus.description %></p>
+          <a href="/findus/<%=findus._id %> " class="btn btn-warning">Found a clue?</a>
         </div>
       </div>
 
