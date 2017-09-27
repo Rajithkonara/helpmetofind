@@ -9,7 +9,9 @@ What you will do is straghitly log in to your facebook account and post it your 
 your friens, try to post them on famous pages or else you put it on a news paper or, paste a bill on somewhere else.
  like as this,
 
-![Alt text](http://ghk.h-cdn.co/assets/cm/15/12/550914cc16bd6-ghk-lost-pet-xl.jpg "Optional title")
+
+
+![alt-text-1](http://ghk.h-cdn.co/assets/cm/15/12/550914cc16bd6-ghk-lost-pet-xl.jpg "title-1") ![alt-text-2](https://lh3.ggpht.com/LrTNkamEvilw9bsg0nMQUEFcFsdJcgj-pVP3DvOkq3X4W7bBrZRG3bzt8yuysIq1usgW=h900 "title-2")
 
 ## What happens next
 Time goes so fast, but if you found your lost relative, friend, pet you are lucky. But what about others?
