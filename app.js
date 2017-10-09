@@ -12,10 +12,10 @@ mongoose.connect("mongodb://helpus:helpus@ds139954.mlab.com:39954/helpus",{useMo
 
 
 var findusall=[
-    {name: "Tommy",breed: "German Shephard",image:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Buck_The_GSD.jpg/170px-Buck_The_GSD.jpg"},
-    {name: "Rega", breed:"Rottweiler",image:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/%22Prince%22_%287369763074%29.jpg/200px-%22Prince%22_%287369763074%29.jpg"},
-    {name:"Lasy", breed:"bulldog",image:"http://cdn3-www.dogtime.com/assets/uploads/gallery/bulldog-dog-breed-pictures/1-threequartersitting.jpg"},
-    {name:"Kitty", breed:"kittycat",image:"https://www.petfinder.com/wp-content/uploads/2012/11/91615172-find-a-lump-on-cats-skin-632x475.jpg"}
+    // {name: "Tommy",breed: "German Shephard",image:"https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Buck_The_GSD.jpg/170px-Buck_The_GSD.jpg"},
+    // {name: "Rega", breed:"Rottweiler",image:"https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/%22Prince%22_%287369763074%29.jpg/200px-%22Prince%22_%287369763074%29.jpg"},
+    // {name:"Lasy", breed:"bulldog",image:"http://cdn3-www.dogtime.com/assets/uploads/gallery/bulldog-dog-breed-pictures/1-threequartersitting.jpg"},
+    // {name:"Kitty", breed:"kittycat",image:"https://www.petfinder.com/wp-content/uploads/2012/11/91615172-find-a-lump-on-cats-skin-632x475.jpg"}
 ]
 
 
