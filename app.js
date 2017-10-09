@@ -2,13 +2,13 @@ var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
-
+const config = require('./config/application_config');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/images/'));
 
-mongoose.connect("mongodb://helpus:helpus@ds139954.mlab.com:39954/helpus",{useMongoClient:true});
+mongoose.connect(config.mongoDb ,{useMongoClient:true});
 
 
 var findusall=[
@@ -109,6 +109,6 @@ app.get("/findus/:id",function(req,res){
   
   
 
-app.listen(3000,function(){
-    console.log("Yeay server is working");
+app.listen(config.serverPort,function(){
+    console.log("Yeay server is working on port " + config.serverPort);
 });
